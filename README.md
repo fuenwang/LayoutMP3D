@@ -6,7 +6,7 @@ our dataset can provide both layout and depth information.
 Here we release our layout annotation with Manhattan assumption.
 ## How to use
 ### Get Alignment Matterport3D Data
-+ Step1: Down [Matterport3D](https://github.com/niessner/Matterport) Official Dataset
++ Step1: Download [Matterport3D](https://github.com/niessner/Matterport) Official Dataset
 + Step2: Stitch Matterport3D data into an Equirectangular [link](https://github.com/yindaz/PanoBasic)
 + Step3: Pre-processing and Calibrating Equirectangular Data (Align camera pose with floor) by using [pytorch-layoutnet](https://github.com/sunset1995/pytorch-layoutnet)
 ### Load our annotation
