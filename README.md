@@ -1,6 +1,6 @@
-## MP3DLayout
+## LayoutMP3D
 ![](github_mp3dLayout.png)
-MP3DLayout is a 3D layout Dataset from a subset of Matterport3D. 
+LayoutMP3D is a 3D layout Dataset from a subset of Matterport3D. 
 Matterport3D contains accurate depth ground truth from time-of-flight(ToF) sensors, 
 our dataset can provide both layout and depth information.
 Here we release our layout annotation with Manhattan assumption.
@@ -23,8 +23,8 @@ LayoutMp3D
 └─── val_new.txt
 ```
 
-- **layout_label_all** containing 2502 json file with layout annotation. </br>
-- **train_new.txt** containing 1878 train data and **val_new.txt** containing 463 test data. We take some non-suitable case from 2502 file, therefore the sum of train/test split have 2341 data. </br>
+- **layout_label_all** contains 2502 json file with layout annotation in total. </br>
+- **train_new.txt** contains 1878 training samples and **val_new.txt** contains 463 testing samples. We remove some invalid cases. Hence, there are 2341 samples in total.
 
 We save our layout label with json file which contain layout information with corner points, plane equation and layout height. In addition, we set the distance between camera and floor to 1.6, then we can get layout height. Here I take a four corner layout label as an example to illustrate our label format.
 ```json
