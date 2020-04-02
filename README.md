@@ -26,7 +26,8 @@ LayoutMp3D
 - **layout_label_all** contains 2502 json file with layout annotation in total. </br>
 - **train_new.txt** contains 1878 training samples and **val_new.txt** contains 463 testing samples. We remove some invalid cases. Hence, there are 2341 samples in total.
 
-We save our layout label with json file which contain layout information with corner points, plane equation and layout height. In addition, we set the distance between camera and floor to 1.6, then we can get layout height. Here I take a four corner layout label as an example to illustrate our label format.
+We save our annotation as a single json file which contains layout information with corner points, plane equation, and layout height. As we don't have absolute scale of rooms, we normalize the distance between camera and floor to 1.6. Here we take an annotation file which is a four-corner case as an example to illustrate the format.
+
 ```json
 {
     "cameraCeilingHeight": 0.7278137969970699, "the distance between camera and ceiling"
@@ -172,14 +173,11 @@ We save our layout label with json file which contain layout information with co
     }
 
 ```
-<!--
-We save our layout label with json file; layout information with latitude and longitude coordinate.
-The format size is (12, 2), if corner number less than 12, we concatenate **inf** to make the size become 12.
--->
+
 ## Citation
 @misc{2003.13516, </br>
-Author = {Fu-En Wang and Yu-Hsuan Yeh and Min Sun and Wei-Chen Chiu and Yi-Hsuan Tsai}, </br>
-Title = {LayoutMP3D: Layout Annotation of Matterport3D}, </br>
-Year = {2020}, </br>
-Eprint = {arXiv:2003.13516}, </br>
+    Author = {Fu-En Wang and Yu-Hsuan Yeh and Min Sun and Wei-Chen Chiu and Yi-Hsuan Tsai}, </br>
+    Title = {LayoutMP3D: Layout Annotation of Matterport3D}, </br>
+    Year = {2020}, </br>
+    Eprint = {arXiv:2003.13516}, </br>
 }
